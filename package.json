@@ -1,0 +1,14 @@
+{
+  "name": "mini-microservice-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install-all": "npm install --prefix client && npm install --prefix comments && npm install --prefix event-bus && npm install --prefix moderation && npm install --prefix posts && npm install --prefix query",
+    "start-client": "npm start --prefix client"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
