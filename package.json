@@ -9,7 +9,9 @@
     "start-client": "npm start --prefix client",
     "start-posts": "npm start --prefix posts",
     "start-comments": "npm start --prefix comments",
-    "start-event-bus": "npm start --prefix event-bus"
+    "start-event-bus": "npm start --prefix event-bus",
+    "start-query": "npm start --prefix query",
+    "start-moderation": "npm start --prefix moderation"
   },
   "keywords": [],
   "author": "",
