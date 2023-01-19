@@ -2,10 +2,12 @@
 const PORT = process.env.PORT || 4000;
 const express = require('express');
 const { randomBytes } = require('crypto');
+const cors = require('cors');
 
 const app = express();
+app.use(cors());
 
-app.use(express.json({ limit: "10kb" }));
+app.use(express.json({ limit: '10kb' }));
 
 const posts = {};
 

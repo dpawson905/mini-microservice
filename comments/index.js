@@ -2,8 +2,10 @@
 const PORT = process.env.PORT || 4001;
 const express = require('express');
 const { randomBytes } = require('crypto');
+const cors = require('cors');
 
 const app = express();
+app.use(cors());
 
 app.use(express.json({ limit: '10kb' }));
 
@@ -18,6 +20,7 @@ app.post('/posts/:id/comments', (req, res, next) => {
   const comments = commentsByPostId[req.params.id] || [];
   comments.push({ id: commentId, content });
   commentsByPostId[req.params.id] = comments;
+  if (commentsByPostId[req.params.id] === undefined) return res.send([]);
   res.status(201).send(comments);
 });
 
